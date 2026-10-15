@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f3ed" />
+    <meta name="description" content="Sign in or create your Daymark account." />
+    <title>Welcome to Daymark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="auth-layout">
+      <aside class="visual-panel" aria-label="Daymark workspace">
+        <div class="visual-panel__image" aria-hidden="true"></div>
+        <a class="brand brand--light" href="#" aria-label="Daymark home">
+          <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>daymark</span>
+        </a>
+        <div class="visual-panel__copy">
+          <span class="eyebrow"><span class="eyebrow__dot"></span> YOUR SPACE, YOUR PACE</span>
+          <h2>A little more room<br />to think clearly.</h2>
+          <p>Good things begin with a fresh page.</p>
+        </div>
+        <span class="visual-panel__credit">A quieter corner of the internet.</span>
+      </aside>
+
+      <section class="form-panel" aria-labelledby="form-title">
+        <a class="brand brand--mobile" href="#" aria-label="Daymark home">
+          <span class="brand__mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>daymark</span>
+        </a>
+
+        <div class="auth-box">
+          <div class="auth-heading">
+            <span class="auth-heading__kicker">WELCOME TO DAYMARK</span>
+            <h1 id="form-title">Welcome back</h1>
+            <p id="form-description">Sign in to pick up where you left off.</p>
+          </div>
+
+          <div class="auth-switch" role="tablist" aria-label="Account access">
+            <button class="auth-switch__button is-active" id="signin-tab" type="button" role="tab" aria-selected="true" aria-controls="signin-form">Sign in</button>
+            <button class="auth-switch__button" id="register-tab" type="button" role="tab" aria-selected="false" aria-controls="register-form">Create account</button>
+          </div>
+
+          <form class="auth-form" id="signin-form" aria-labelledby="signin-tab" novalidate>
+            <label class="field">
+              <span class="field__label">Username</span>
+              <input class="field__input" type="text" name="username" autocomplete="username" placeholder="Your username" required />
+            </label>
+            <label class="field">
+              <span class="field__label">Password</span>
+              <input class="field__input" type="password" name="password" autocomplete="current-password" placeholder="Your password" required />
+            </label>
+            <button class="submit-button" type="submit">
+              <span>Sign in</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10h10m-4-4 4 4-4 4" /></svg>
+            </button>
+            <button class="demo-button" id="demo-login" type="button">Fill sample account</button>
+          </form>
+
+          <form class="auth-form" id="register-form" hidden aria-labelledby="register-tab" novalidate>
+            <div class="field-row">
+              <label class="field">
+                <span class="field__label">First name</span>
+                <input class="field__input" type="text" name="firstName" autocomplete="given-name" placeholder="First name" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Last name</span>
+                <input class="field__input" type="text" name="lastName" autocomplete="family-name" placeholder="Last name" required />
+              </label>
+            </div>
+            <label class="field">
+              <span class="field__label">Email address</span>
+              <input class="field__input" type="email" name="email" autocomplete="email" placeholder="you@example.com" required />
+            </label>
+            <label class="field">
+              <span class="field__label">Username</span>
+              <input class="field__input" type="text" name="username" autocomplete="username" placeholder="Choose a username" required />
+            </label>
+            <div class="field-row">
+              <label class="field">
+                <span class="field__label">Password</span>
+                <input class="field__input" type="password" name="password" autocomplete="new-password" placeholder="At least 8 characters" minlength="8" required />
+              </label>
+              <label class="field">
+                <span class="field__label">Confirm password</span>
+                <input class="field__input" type="password" name="confirmPassword" autocomplete="new-password" placeholder="Repeat password" minlength="8" required />
+              </label>
+            </div>
+            <button class="submit-button" type="submit">
+              <span>Create account</span>
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4.5 10h10m-4-4 4 4-4 4" /></svg>
+            </button>
+          </form>
+
+          <p class="form-message" id="form-message" role="status" aria-live="polite" hidden></p>
+          <p class="api-note">Demo environment · account creation is not saved</p>
+        </div>
+        <footer class="form-footer"><span>Made for a fresh start.</span><span>© 2026 Daymark</span></footer>
+      </section>
+    </main>
+  </body>
+</html>
